@@ -8,7 +8,7 @@ module ApplicationHelper
   end
   
   def set_header(text)
-    @title = text
+    @header = text
   end
   
   def header
