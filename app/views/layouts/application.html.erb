@@ -19,9 +19,18 @@
 		    <li><%= link_to "FAQ", faq_path %></li>
 		    <li><%= link_to "Companies", companies_path %></li>
           	</ul>
-		<span class="head1"><%= @header %></span>
-		<br><br>
-        	<%= yield %>
+			<div class="container-fluid">
+				<div class="sidebar">
+      					<a href="http://www.upc.edu/" target="_blank"><img src="sidebar_logos/logoUPC.gif" width="100" height="90"></a>
+					<p><img src="sidebar_logos/Danone.gif" width="100" height="70"></p>
+					<p><img src="sidebar_logos/visual.gif" width="100" height="70"></p>
+					<p><img src="sidebar_logos/accenture.gif" width="100" height="70"></p>
+    				</div>
+    				<div class="content">
+					<span class="head1"><%= @header %></span><br><br>
+              				<%= yield %>
+    				</div>
+  			</div>
 	</div>
 	<br><br>
 	<div class="container-footer">

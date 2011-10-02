@@ -213,8 +213,7 @@ body {
 
 /*img container*/
 .container-img {
-  width: 785px;
-  text-align: center;
+  width: 625px;
   margin-left: auto;
   margin-right: auto;
   zoom: 1;
@@ -231,7 +230,7 @@ body {
 }
 .container-fluid {
   position: relative;
-  min-width: 940px;
+  width: 785px;
   padding-left: 20px;
   padding-right: 20px;
   zoom: 1;
@@ -247,10 +246,11 @@ body {
 }
 .container-fluid > .sidebar {
   float: left;
-  width: 150px;
+  width: 100px;
 }
 .container-fluid > .content {
-  margin-left: 150px;
+  width: 625px;
+  margin-left: 130px;
 }
 a {
   color: #0069d6;
