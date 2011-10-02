@@ -1,3 +1,5 @@
+//= require bootstrap
+
 a:link {color:#888; text-decoration:none;}    /* unvisited link */
 a:visited {color:#999; text-decoration:none;} /* visited link */
 a:hover {color:#555; text-decoration:none;}   /* mouse over link */
