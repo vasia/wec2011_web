@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<%= stylesheet_link_tag    "bootstrap" %>
+<head>
+<title>BEST Barcelona WEC 2011 - <%= @title %></title>
+<link rel="shortcut icon" href="best_fav.gif" />
+</head>
+<body>
+	<div class="container">
+		<%= image_tag("header.jpg", :alt => "BEST Barcelona WEC 2011") %>
+          	<ul class="pills">
+		    <li><%= link_to "Home", home_path %></li>
+		    <li><%= link_to "Registration", participants_path %></li>
+		    <li><%= link_to "Agenta", agenda_path %></li>
+		    <li><%= link_to "Location", location_path %></li>
+		    <li><%= link_to "Career Support", career_support_path %></li>
+		    <li><%= link_to "Gallery", gallery_path %></li>
+		    <li><%= link_to "About Us", about_us_path %></li>
+		    <li><%= link_to "FAQ", faq_path %></li>
+		    <li><%= link_to "Companies", companies_path %></li>
+          	</ul>
+		<span class="head1"><%= @header %></span>
+		<br><br>
+        	<%= yield %>
+	</div>
+	<br><br>
+	<div class="container-footer">
+	<p><b>Copyright &copy; 2011 BEST Barcelona</b></p>
+	</div>
+</body>
+</html>
+
