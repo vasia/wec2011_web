@@ -7,16 +7,15 @@ gem 'rails', '3.1.0'
 
 gem 'sqlite3', '1.3.3', :group => :development
 
-
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
-  gem 'uglifier'
-end
+#group :assets do
+#  gem 'sass-rails', "  ~> 3.1.0"
+#  gem 'coffee-rails', "~> 3.1.0"
+#  gem 'uglifier'
+#end
 
-gem 'jquery-rails'
+#gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -29,15 +28,15 @@ gem 'jquery-rails'
 #group :development do
 #  gem 'rspec-rails'
 #end
-group :development do
-  gem 'rspec-rails'
-end
-group :test do
+#group :development do
+#  gem 'rspec-rails'
+#end
+#group :test do
   # Pretty printed test output
-  gem 'turn', :require => false
-  gem 'rspec-rails'
-  gem 'webrat'
-end
+#  gem 'turn', :require => false
+#  gem 'rspec-rails'
+#  gem 'webrat'
+#end
 
-gem 'execjs'
-gem 'therubyracer'
+#gem 'execjs'
+#gem 'therubyracer'
