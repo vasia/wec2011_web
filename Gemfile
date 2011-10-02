@@ -18,7 +18,7 @@ gem "sqlite3-ruby", :group => :development
 #  gem 'uglifier'
 #end
 
-#gem 'jquery-rails'
+gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
