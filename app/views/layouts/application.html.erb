@@ -10,7 +10,7 @@
 		<%= image_tag("header.jpg", :alt => "BEST Barcelona WEC 2011") %>
 
 	<div class="container-lang">
-	<p>&nbsp;<a href=#>English</a>&nbsp; | &nbsp;<a href=#>Català</a> &nbsp; | &nbsp;<a href=#>Español</a></a> &nbsp; | &nbsp;<%= link_to "Contact", contact_path %></p>
+	<p>&nbsp;<%= link_to "English", home_path %>&nbsp; | &nbsp;<%= link_to "Català", home_path%>&nbsp; | &nbsp;<%= link_to "Español", home_path %>&nbsp; | &nbsp;<%= link_to "Contact", contact_path %></p>
 	</div>
           	<ul class="pills">
 		    <li><%= link_to t(:home), home_path %></li>
