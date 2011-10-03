@@ -12,6 +12,9 @@ Wec2011Web::Application.routes.draw do
 	match '/location', :to => 'pages#location'
 	match '/contact', :to => 'pages#contact'
 
+	match '/:locale' => 'pages#home'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

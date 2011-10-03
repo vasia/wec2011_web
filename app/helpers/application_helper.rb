@@ -1,6 +1,6 @@
 module ApplicationHelper
   def set_title(text)
-    @title = text
+    @title = t(text)
   end
   
   def title
@@ -8,7 +8,7 @@ module ApplicationHelper
   end
   
   def set_header(text)
-    @header = text
+    @header = t(text)
   end
   
   def header

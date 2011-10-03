@@ -1,18 +1,18 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-en:
+es:
 #page titles and headers
-  about_us: "About Us"
+  about_us: "Quiénes Somos?"
   agenda: "Agenda"
   career_support: "Career Support"
-  companies: "Companies"
-  contact: "Contact"
+  companies: "Empresas"
+  contact: "Contacto"
   faq: "Frequently Asked Questions"
-  gallery: "Gallery"
+  gallery: "Galería"
   home: "Home"
-  home_header: "What is the BEST WEC?"
-  location: "Location"
+  home_header: "¿Qué es la BEST WEC?"
+  location: "Localización"
 #menu entries missing
-  reg_menu: "Registration"
+  reg_menu: "Participa"
   faq_menu: "FAQ"

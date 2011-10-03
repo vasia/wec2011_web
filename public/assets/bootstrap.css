@@ -1690,8 +1690,7 @@ a.menu:after, .dropdown-toggle:after {
   clear: both;
 }
 .pills a {
-  /*background: #bfbfbf;*/
-  margin: 5px 3px 5px 0;
+  margin: 5px 0px 5px 0;
   padding: 0 15px;
   text-shadow: 0 1px 1px #ffffff;
   line-height: 30px;
