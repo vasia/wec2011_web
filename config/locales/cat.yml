@@ -13,6 +13,7 @@ cat:
   home: "Home"
   home_header: "Què és la BEST WEC?"
   location: "Ubicació"
+  registration: "Participa"
 #menu entries missing
   reg_menu: "Participa"
   faq_menu: "FAQ"

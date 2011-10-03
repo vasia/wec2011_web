@@ -13,6 +13,7 @@ en:
   home: "Home"
   home_header: "What is the BEST WEC?"
   location: "Location"
+  registration: "Register"
 #menu entries missing
   reg_menu: "Registration"
   faq_menu: "FAQ"

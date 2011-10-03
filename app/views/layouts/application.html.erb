@@ -3,7 +3,7 @@
 <%= stylesheet_link_tag "application" %>
 <head>
 <title>BEST Barcelona WEC 2011 <%= title %></title>
-<link rel="shortcut icon" href="best_fav.gif" />
+<link rel="shortcut icon" href="best_fav.gif"/>
 </head>
 <body>
 	<div class="container">
@@ -14,7 +14,7 @@
 	</div>
           	<ul class="pills">
 		    <li><%= link_to t(:home), home_path %></li>
-		    <li><%= link_to t(:reg_menu), participants_path %></li>
+		    <li><%= link_to t(:reg_menu), new_participant_path %></li>
 		    <li><%= link_to t(:agenda), agenda_path %></li>
 		    <li><%= link_to t(:location), location_path %></li>
 		    <li><%= link_to t(:carrer_support), career_support_path %></li>
@@ -25,10 +25,10 @@
           	</ul>
 			<div class="container-fluid">
 				<div class="sidebar">
-      					<a href="http://www.upc.edu/" target="_blank"><img src="sidebar_logos/logoUPC.gif" width="100" height="90"></a>
-					<p><img src="sidebar_logos/Danone.gif" width="100" height="70"></p>
-					<p><img src="sidebar_logos/visual.gif" width="100" height="70"></p>
-					<p><img src="sidebar_logos/accenture.gif" width="100" height="70"></p>
+      					<a href="http://www.upc.edu/" target="_blank"><%= image_tag("sidebar_logos/logoUPC.gif", :size => "100x90") %></a>
+					<p><%= image_tag("sidebar_logos/Danone.gif", :size => "100x70") %></p>
+					<p><%= image_tag("sidebar_logos/visual.gif", :size => "100x70") %></p>
+					<p><%= image_tag("sidebar_logos/accenture.gif", :size => "100x70") %></p>
     				</div>
     				<div class="content">
 					<span class="head1"><%= header %></span><br><br>

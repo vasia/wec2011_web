@@ -14,5 +14,4 @@ module ApplicationHelper
   def header
     @header
   end
-
 end

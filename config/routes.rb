@@ -12,6 +12,10 @@ Wec2011Web::Application.routes.draw do
 	match '/location', :to => 'pages#location'
 	match '/contact', :to => 'pages#contact'
 
+	scope "/:locale" do
+	  resources :participants
+	end
+	
 	match '/:locale' => 'pages#home'
 
 
