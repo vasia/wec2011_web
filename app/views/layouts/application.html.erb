@@ -10,7 +10,7 @@
 		<%= image_tag("header.jpg", :alt => "BEST Barcelona WEC 2011") %>
 
 	<div class="container-lang">
-	<p>&nbsp;<%= link_to "English", home_path %>&nbsp; | &nbsp;<%= link_to "Català", home_path%>&nbsp; | &nbsp;<%= link_to "Español", home_path %>&nbsp; | &nbsp;<%= link_to "Contact", contact_path %></p>
+	<p>&nbsp;<%= link_to('English', url_for(:locale => 'en'))%>&nbsp; | &nbsp;<%= link_to('Català', url_for(:locale => 'cat'))%>&nbsp; | &nbsp;<%= link_to('Español', url_for(:locale => 'es')) %>&nbsp; | &nbsp;<%= link_to "Contact", contact_path %></p>
 	</div>
           	<ul class="pills">
 		    <li><%= link_to t(:home), home_path %></li>
