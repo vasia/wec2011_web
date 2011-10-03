@@ -10,6 +10,7 @@ Wec2011Web::Application.routes.draw do
 	match '/faq', :to => 'pages#faq'
 	match '/gallery', :to => 'pages#gallery'
 	match '/location', :to => 'pages#location'
+	match '/contact', :to => 'pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
