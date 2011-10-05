@@ -2,7 +2,7 @@
 <%= form_for(@participant) do |f| %>
   <% if @participant.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@participant.errors.count, "error") %> prohibited this participant from being saved:</h2>
+      <h2><%= pluralize(@participant.errors.count, "error") %> found while trying saving your form:</h2>
 
       <ul>
       <% @participant.errors.full_messages.each do |msg| %>
@@ -12,31 +12,39 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :surname %><br />
-    <%= f.text_field :surname %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :studies %><br />
-    <%= f.text_field :studies %>
-  </div>
-  <div class="field">
-    <%= f.label :year_of_studies %><br />
-    <%= f.number_field :year_of_studies %>
-  </div>
-  <div class="field">
-    <%= f.label :comments %><br />
-    <%= f.text_area :comments %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<form>
+	<fieldset>
+		<div class="clearfix">
+	        	<label for="name"><%= f.label :name %></label>
+	    			<div class="input"><%= f.text_field :name %></div>
+		</div>
+		<div class="clearfix">
+	    		<label for="surname"><%= f.label :surname %></label>
+	    			<div class="input"><%= f.text_field :surname %></div>
+		</div>
+		<div class="clearfix">
+	    		<label for="email"><%= f.label :email %></label>
+	    			<div class="input"><%= f.text_field :email %></div>
+		</div>
+		<div class="clearfix">
+	    		<label for="studies"><%= f.label :studies %></label>
+	    			<div class="input"><%= f.text_field :studies %></div>
+		</div>
+		<div class="clearfix">
+	    		<label for="year_of_studies"><%= f.label :year_of_studies %></label>
+	    			<div class="input"><%= f.text_field :year_of_studies %></div>
+		</div>
+		<div class="clearfix">
+	    		<label for="comments"><%= f.label :comments %></label>
+	    			<div class="input"><%= f.text_area :comments %></div>
+		</div>
+		<div class="clearfix">
+	    	<div class="actions">
+	    		<input type="submit" class="btn primary" value="Save changes">&nbsp;<button type="reset" class="btn">Cancel</button>
+	  	</div>
+		</div>
+	</fieldset>
+
+</form>
+
 <% end %>
