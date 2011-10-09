@@ -44,12 +44,20 @@ class ParticipantsController < ApplicationController
 
     respond_to do |format|
       if @participant.save
-        format.html { redirect_to @participant, notice: 'Participant was successfully created.' }
+	format.html { render action: "created" }
+        #format.html { redirect_to @participant, notice: 'Participant was successfully created.' }
         format.json { render json: @participant, status: :created, location: @participant }
       else
         format.html { render action: "new" }
         format.json { render json: @participant.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  # after a participant is created redirect to "thank you" page
+  def created
+      respond_to do |format|
+      format.html # created.html.erb
     end
   end
 
