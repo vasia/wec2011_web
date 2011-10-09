@@ -38,6 +38,14 @@
 	    		<label for="comments"><%= f.label :comments %></label>
 	    			<div class="input"><%= f.text_area :comments %></div>
 		</div>
+
+		<div class="clearfix">
+		<%= form_tag '/upload', :multipart => true do %>
+		<label for="file">Upload CV</label><div class="input"><%= file_field_tag "file" %></div>
+  		<!%= submit_tag %>
+		<% end %>
+		</div>
+		
 		<div class="clearfix">
 	    	<div class="actions">
 	    		<input type="submit" class="btn primary" value="Save changes">&nbsp;<button type="reset" class="btn">Cancel</button>
