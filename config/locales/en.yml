@@ -14,6 +14,7 @@ en:
   home_header: "What is the BEST WEC?"
   location: "Location"
   registration: "Register"
+  thank_you: "Thank you for registering!"
 #menu entries missing
   reg_menu: "Registration"
   faq_menu: "FAQ"
