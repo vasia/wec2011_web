@@ -18,4 +18,12 @@ cat:
 #menu entries missing
   reg_menu: "Participa"
   faq_menu: "FAQ"
+#form fields
+  name: "Nom"
+  surname: "Cognoms"
+  email: "Correu electrònic"
+  studies: "Estudis"
+  year_of_studies: "Curs"
+  comments: "Comentaris"
+  upload_cv: "Puja el teu currículum"
 

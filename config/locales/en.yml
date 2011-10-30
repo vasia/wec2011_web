@@ -18,3 +18,11 @@ en:
 #menu entries missing
   reg_menu: "Registration"
   faq_menu: "FAQ"
+#form fields
+  name: "Name"
+  surname: "Surname"
+  email: "e-mail"
+  studies: "Studies"
+  year_of_studies: "Year of Studies"
+  comments: "Comments"
+  upload_cv: "Upload your CV"

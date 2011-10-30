@@ -18,3 +18,11 @@ es:
 #menu entries missing
   reg_menu: "Participa"
   faq_menu: "FAQ"
+#form fields
+  name: "Nombre"
+  surname: "Apellidos"
+  email: "Coreo electrónico"
+  studies: "Estudios"
+  year_of_studies: "Curso"
+  comments: "Comentarios"
+  upload_cv: "Sube tu currículum"
