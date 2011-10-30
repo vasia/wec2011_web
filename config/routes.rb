@@ -11,6 +11,7 @@ Wec2011Web::Application.routes.draw do
 	match '/gallery', :to => 'pages#gallery'
 	match '/location', :to => 'pages#location'
 	match '/contact', :to => 'pages#contact'
+	match '/competitions', :to => 'pages#competitions'
 
 	scope "/:locale" do
 	  resources :participants

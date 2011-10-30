@@ -18,6 +18,7 @@ cat:
 #menu entries missing
   reg_menu: "Participa"
   faq_menu: "FAQ"
+  competitions: "Competicions"
 #form fields
   name: "Nom"
   surname: "Cognoms"

@@ -18,6 +18,7 @@ en:
 #menu entries missing
   reg_menu: "Registration"
   faq_menu: "FAQ"
+  competitions: "Competitions"
 #form fields
   name: "Name"
   surname: "Surname"
