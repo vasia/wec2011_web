@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <%= form_for(@participant) do |f| %>
   <% if @participant.errors.any? %>
     <div id="error_explanation">
@@ -48,15 +47,31 @@
     <ul class="inputs-list">
      	<li>
 				<label><input type="checkbox" name="optionsCheckboxes" value="option1" />
-         	<span>I accept my information to be kept in BEST-UPC database</span>
+         	<span>I accept my information to be kept in BEST-UPC database.</span>
         </label>
       </li>
     </ul>
-		<div class="clearfix">
+   <span class="help-block">
+      <strong>Note: </strong><a href=# rel="popover" title="Protección de Datos de Carácter Personal" data-content="En cumplimiento de la Ley Orgánica 15/1999, de 13 de diciembre de Protección de Datos de Carácter Personal (LOPD), BEST-UPC, como responsable del fichero informa de las siguientes consideraciones:
+Los datos de carácter personal que le solicitamos, quedarán incorporados a un fichero cuya finalidad es ser enviados a las empresas participantes en la BEST Week Engineering Competition. Los campos marcados con asterisco son de cumplimentación obligatoria, siendo imposible realizar la finalidad expresada si no aporta esos datos.
+Queda igualmente informado de la posibilidad de ejercitar los derechos de acceso, rectificación, cancelación y oposición, de sus datos personales en la siguiente dirección: BEST-UPC, c/ Gran Capità s/n, Despacho A3S105, 08034 Barcelona.">Read More</a> about data privacy.
+	<script>
+		$(function () {
+			$("a[rel=popover]")
+			.popover({ placement: 'above' })
+			.click(function(e) {
+			e.preventDefault()
+			})
+		})
+		$("a[rel=popover]").popover('show');
+	</script>
+
+   </span>
+		<!div class="clearfix">
 	    	<div class="actions">
 	    		<input type="submit" class="btn primary" value="Save changes">&nbsp;<button type="reset" class="btn">Cancel</button>
 	  	</div>
-		</div>
+		<!/div>
 	</fieldset>
 
 </form>
