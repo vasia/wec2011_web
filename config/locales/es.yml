@@ -21,7 +21,7 @@ es:
 #form fields
   name: "Nombre"
   surname: "Apellidos"
-  email: "Coreo electrónico"
+  email: "Correo electrónico"
   studies: "Estudios"
   year_of_studies: "Curso"
   comments: "Comentarios"
