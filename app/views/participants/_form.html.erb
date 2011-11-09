@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <%= form_for(@participant) do |f| %>
   <% if @participant.errors.any? %>
     <div id="error_explanation">
@@ -29,20 +30,30 @@
 	    		<label for="studies"><%= f.label t(:studies) %></label>
 	    			<div class="input"><%= f.text_field :studies %></div>
 		</div>
-		<div class="clearfix">
-	    		<label for="year_of_studies"><%= f.label t(:year_of_studies) %></label>
-	    			<div class="input"><%= f.text_field :year_of_studies %></div>
-		</div>
+
+		 <div class="clearfix">
+            		<label for="year_of_studies"><%= f.label t(:year_of_studies) %></label>
+			<div class="input"><%= f.select(:year_of_studies, '<option value="">Select</option>
+				 <option value="1">1</option>
+				 <option value="2">2</option>
+				 <option value="3">3</option>
+                                 <option value="4">4</option>
+				 <option value="5">5</option>') %>
+            		</div>
+          	</div><!-- /clearfix -->
+
 		<div class="clearfix">
 	    		<label for="comments"><%= f.label t(:comments) %></label>
 	    			<div class="input"><%= f.text_area :comments %></div>
 		</div>
 
 		<div class="clearfix">
+
 		<%= form_tag '/upload', :multipart => true do %>
-		<label for="file"><%= t(:upload_cv) %></label><div class="input"><%= file_field_tag "file" %></div>
+		<label for="data"><%= t(:upload_cv) %></label><div class="input"><%= file_field_tag "data" %></div>
   		<!%= submit_tag %>
-		<% end %>
+		<% end %>	
+
 		</div>
     <ul class="inputs-list">
      	<li>
