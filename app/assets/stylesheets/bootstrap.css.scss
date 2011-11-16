@@ -213,11 +213,39 @@ body {
 
 /*img container*/
 .container-img {
-  width: 785px;
-  text-align: center;
+  width: 625px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
   zoom: 1;
+}
+
+/*footer container*/
+.container-lang {
+  width: 780px;
+  background-color: #46a546;
+  color: #ffffff;
+  margin-left: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: auto;
+  zoom: 1;
+}
+
+.container-lang a {
+  font-size: 11px;
+  margin: 2px 1px 2px 0;
+  padding: 0 5px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.container-lang a:hover {
+  color: #bfbfbf;
+  text-decoration: none;
+}
+.container-lang .active a {
+  color: #f89406;
 }
 
 .container:before, .container:after {
@@ -231,7 +259,7 @@ body {
 }
 .container-fluid {
   position: relative;
-  min-width: 940px;
+  width: 785px;
   padding-left: 20px;
   padding-right: 20px;
   zoom: 1;
@@ -247,10 +275,11 @@ body {
 }
 .container-fluid > .sidebar {
   float: left;
-  width: 150px;
+  width: 100px;
 }
 .container-fluid > .content {
-  margin-left: 150px;
+  width: 625px;
+  margin-left: 130px;
 }
 a {
   color: #0069d6;
@@ -1662,9 +1691,8 @@ a.menu:after, .dropdown-toggle:after {
   clear: both;
 }
 .pills a {
-  /*background: #bfbfbf;*/
-  margin: 5px 3px 5px 0;
-  padding: 0 15px;
+  margin: 5px 0px 5px 0;
+  padding: 0 8px;
   text-shadow: 0 1px 1px #ffffff;
   line-height: 30px;
   -webkit-border-radius: 15px;
@@ -2293,7 +2321,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 3px;
   overflow: hidden;
-  width: 280px;
+  width: 400px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;

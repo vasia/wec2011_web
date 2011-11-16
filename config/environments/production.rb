@@ -57,4 +57,17 @@ Wec2011Web::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+config.action_mailer.raise_delivery_errors = true
+
+ActionMailer::Base.smtp_settings = { 
+  :address              => "smtp.gmail.com",
+  :port                 => 587,
+  :domain               => 'gmail.com',
+  :user_name            => 'best.wec.2011@gmail.com',
+  :password             => 'bestwec2011',
+  :authentication       => 'plain',
+  :enable_starttls_auto => true  }
+
+
 end

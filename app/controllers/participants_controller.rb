@@ -5,20 +5,15 @@ class ParticipantsController < ApplicationController
     @participants = Participant.all
 
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @participants }
+      format.html {redirect_to home_path}
     end
   end
 
   # GET /participants/1
   # GET /participants/1.json
   def show
-    @participant = Participant.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @participant }
-    end
+      respond_to do |format|
+      format.html {redirect_to home_path}  end
   end
 
   # GET /participants/new
@@ -34,16 +29,26 @@ class ParticipantsController < ApplicationController
 
   # GET /participants/1/edit
   def edit
-    @participant = Participant.find(params[:id])
+    format.html {redirect_to home_path}
   end
 
   # POST /participants
   # POST /participants.json
   def create
+
     @participant = Participant.new(params[:participant])
+
+	require 'fileutils'
+	@tmp = params[:cv_file]
 
     respond_to do |format|
       if @participant.save
+
+        # Tell the ParticipantMailer to send an e-mail
+        ParticipantMailer.participate_email(@participant, @tmp).deliver
+
+	#format.html {redirect_to home_path}
+
 	format.html { render action: "created" }
         #format.html { redirect_to @participant, notice: 'Participant was successfully created.' }
         format.json { render json: @participant, status: :created, location: @participant }
@@ -53,6 +58,7 @@ class ParticipantsController < ApplicationController
       end
     end
   end
+
 
   # after a participant is created redirect to "thank you" page
   def created
@@ -64,28 +70,16 @@ class ParticipantsController < ApplicationController
   # PUT /participants/1
   # PUT /participants/1.json
   def update
-    @participant = Participant.find(params[:id])
-
     respond_to do |format|
-      if @participant.update_attributes(params[:participant])
-        format.html { redirect_to @participant, notice: 'Participant was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @participant.errors, status: :unprocessable_entity }
-      end
+      format.html {redirect_to home_path}
     end
   end
 
   # DELETE /participants/1
   # DELETE /participants/1.json
   def destroy
-    @participant = Participant.find(params[:id])
-    @participant.destroy
-
     respond_to do |format|
-      format.html { redirect_to participants_url }
-      format.json { head :ok }
+     format.html {redirect_to home_path}
     end
   end
 end

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%= form_for(@participant) do |f| %>
+<%= form_for(@participant, :html => {:multipart => true}) do |f| %>
   <% if @participant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@participant.errors.count, "error") %> found while trying saving your form:</h2>
@@ -30,28 +30,81 @@
 	    		<label for="studies"><%= f.label t(:studies) %></label>
 	    			<div class="input"><%= f.text_field :studies %></div>
 		</div>
-		<div class="clearfix">
-	    		<label for="year_of_studies"><%= f.label t(:year_of_studies) %></label>
-	    			<div class="input"><%= f.text_field :year_of_studies %></div>
-		</div>
+		 <div class="clearfix">
+            		<label for="year_of_studies"><%= f.label t(:year_of_studies) %></label>
+			<div class="input"><%= f.select(:year_of_studies, '<option value="">Select</option>
+				 <option value="1">1</option>
+				 <option value="2">2</option>
+				 <option value="3">3</option>
+                                 <option value="4">4</option>
+				 <option value="5">5</option>') %>
+            		</div>
+          	</div><!-- /clearfix -->
+
+ <div class="clearfix">
+            <label id="optionsCheckboxes">Categorías</label>
+            <div class="input">
+              <ul class="inputs-list">
+                <li>
+                  <label>
+                    <%= f.check_box :agbar_cs %>
+                    <span>Agbar Case Study</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <%= f.check_box :tmb_cs %>
+                    <span>TMB Case Study</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <%= f.check_box :henkel_cs %>
+                    <span>Henkel Case Study</span>
+                  </label>
+                </li>
+		<li>
+                  <label>
+                    <%= f.check_box :accenture_w %>
+                    <span>Accenture Workshop</span>
+                  </label>
+                </li>
+		<li>
+                  <label>
+                    <%= f.check_box :danone_w %>
+                    <span>Danone WorkShop</span>
+                  </label>
+                </li>
+
+		<li>
+                  <label>
+                    <%= f.check_box :everis_w %>
+                    <span>Everis WorkShop</span>
+                  </label>
+                </li>
+
+		<li>
+                  <label>
+                    <%= f.check_box :team_design %>
+                    <span>Team Design</span>
+                  </label>
+                </li>
+
+              </ul>
+            </div>
+          </div><!-- /clearfix -->
+
 		<div class="clearfix">
 	    		<label for="comments"><%= f.label t(:comments) %></label>
 	    			<div class="input"><%= f.text_area :comments %></div>
 		</div>
 
-		<div class="clearfix">
-		<%= form_tag '/upload', :multipart => true do %>
-		<label for="file"><%= t(:upload_cv) %></label><div class="input"><%= file_field_tag "file" %></div>
-  		<!%= submit_tag %>
-		<% end %>
+		<div class="clearfix">	
+		<label for="cv_file"><%= t(:upload_cv) %></label><div class="input"><%= file_field_tag "cv_file" %></div>
 		</div>
-    <ul class="inputs-list">
-     	<li>
-				<label><input type="checkbox" name="optionsCheckboxes" value="option1" />
-         	<span>Acepto que mis datos pasen a formar parte del archivo de la asociación BEST-UPC.</span>
-        </label>
-      </li>
-    </ul>
+
+<div class="clearfix"><%= f.check_box :terms %> Acepto que mis datos pasen a formar parte del archivo de la asociación BEST-UPC.</div>
+
 <span class="help-block">
       <strong>Note: </strong><a href=# rel="popover" title="Protección de Datos de Carácter Personal" data-content="En cumplimiento de la Ley Orgánica 15/1999, de 13 de diciembre de Protección de Datos de Carácter Personal (LOPD), BEST-UPC, como responsable del fichero informa de las siguientes consideraciones:
 Los datos de carácter personal que le solicitamos, quedarán incorporados a un fichero cuya finalidad es ser enviados a las empresas participantes en la BEST Week Engineering Competition. Los campos marcados con asterisco son de cumplimentación obligatoria, siendo imposible realizar la finalidad expresada si no aporta esos datos.
